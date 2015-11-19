@@ -4,6 +4,8 @@ import scala.annotation.tailrec
 
 class AlgorithmSilhouette {
 
+  def process(edifs: List[Building]): List[ElemSilhouette] = ???
+
   def silhouetteWithFoldLeft(edifs: List[Building]): List[ElemSilhouette] = {
     edifs.foldLeft(List[ElemSilhouette]())((x: List[ElemSilhouette], y: Building) => union(x, buildingSilhouette(y)))
   }
@@ -20,9 +22,9 @@ class AlgorithmSilhouette {
 
 
   def simplify(alt: Int,
-                 s3: List[ElemSilhouette],
-                 last: ElemSilhouette
-                  ): List[ElemSilhouette] =
+               s3: List[ElemSilhouette],
+               last: ElemSilhouette
+                ): List[ElemSilhouette] =
     if (last == null) s3
     else
       s3 match {
@@ -39,7 +41,7 @@ class AlgorithmSilhouette {
                   s2: List[ElemSilhouette],
                   s3: List[ElemSilhouette],
                   last: ElemSilhouette
-             ): List[ElemSilhouette] = {
+                   ): List[ElemSilhouette] = {
     s1 match {
       case Nil => simplify(s2.head.h, s3, last) reverse_::: s2
       case x :: xs =>

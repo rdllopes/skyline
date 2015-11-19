@@ -2,9 +2,9 @@ package com.dojo.silhouette.silhouette
 
 import scala.annotation.tailrec
 
-object Algorithm2 extends AlgorithmSilhouette {
+object TailRecursiveAlgorithm extends AlgorithmSilhouette {
 
-  def algorithm2(edifs: List[Building]): List[ElemSilhouette] = {
+  override def process(edifs: List[Building]): List[ElemSilhouette] = {
     algorithm_aux(edifs, List())
   }
 
