@@ -1,0 +1,11 @@
+apply plugin:  'scala'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.7'
+    testCompile 'org.scalatest:scalatest_2.11:2+'
+    testRuntime 'org.pegdown:pegdown:1.1.0'
+}
